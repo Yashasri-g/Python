@@ -46,3 +46,51 @@ OUTPUT:
 Enter first number: 5
 Enter second number: 5
 sum of 5 and 5 is 10
+
+x = 10
+y = 3
+
+print(x + y)
+print(x // y)
+print(x ** y)
+OUTPUT : 
+13
+3
+1000
+
+a = 5
+a += 3
+a *= 2
+print(a)
+OUTPUT : 16
+
+print(10 > 5 and 5 < 3) # False
+print(not (10 == 10)) # False
+
+result = 10 + 2 * 5 - 3
+print(result) # 17
+
+print((5 + 3) * 2 ** 2) # 32
+
+text = "PythonProgramming"
+print(text[6:17])
+OUTPUT : 
+Programming
+
+# Reverse the string "developer" using slicing.
+str = "developer"
+print(str[::-1]) 
+OUTPUT :
+repoleved
+
+# Count the number of times 'a' appears in "data analysis"
+str = "data analysis"
+print(str.count("a"))
+OUTPUT:
+4
+
+# Replace "Java" with "Python" in the string: "I love Java programming"
+str = "I love Java programming"
+print(str.replace("Java","Python"))
+OUTPUT:
+I love Python programming
