@@ -94,3 +94,21 @@ str = "I love Java programming"
 print(str.replace("Java","Python"))
 OUTPUT:
 I love Python programming
+
+# Write a program using f-string to print:
+# My name is ___ and I am ___ years old.
+name = "Yashasri"
+age = 20
+print(f"My name is {name} and I am {age} years old.")
+OUTPUT : 
+My name is Yashasri and I am 20 years old.
+
+print("Hello\nWorld")
+print("Python\tProgramming")
+OUTPUT:
+Hello
+World
+Python	Programming
+
+# Check if "AI" is present in "Artificial Intelligence".
+print("AI" in "Artificial Intelligence") # False 
