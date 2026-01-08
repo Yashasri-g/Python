@@ -112,3 +112,22 @@ Python	Programming
 
 # Check if "AI" is present in "Artificial Intelligence".
 print("AI" in "Artificial Intelligence") # False 
+
+text = "banana"
+print(text.count("na"))
+print(text.startswith("ba"))
+print(text.endswith("a"))
+OUTPUT : 
+2
+True
+True
+
+"""
+Write a program that:
+Takes a name from the user
+Converts it to uppercase
+Prints the length of the name
+"""
+name = input("Enter your name: ")
+n = name.upper()
+print(len(n))
