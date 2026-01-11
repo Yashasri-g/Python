@@ -27,3 +27,27 @@ elif num1 == num2 :
 else:
     print(f"{num2} is greater")
 
+marks = int(input("Enter your marks: "))
+if marks >= 90:
+    print("A")
+elif marks>=75:
+    print("B")
+elif marks>=50:
+    print("C")
+else:
+    print("Fail")
+
+a = int(input("NUMBER 1: "))
+b = int(input("NUMBER 2: "))
+print(["add","sub","mul","div"])
+opp = str(input("enter the operation to perform: "))
+if opp == "add" :
+    print(a+b)
+elif opp == "sub":
+    print(a-b)
+elif opp=="mul":
+    print(a*b)
+elif opp=="div":
+    print(a/b)
+else:
+    print("Enter valid operation")
