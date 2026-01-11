@@ -51,3 +51,12 @@ elif opp=="div":
     print(a/b)
 else:
     print("Enter valid operation")
+
+n = int(input("Enter a number: "))
+if n > 0:
+    if n%2 == 0 :
+        print("Positive and Even number")
+    else:
+        print("Positive and Odd number")
+else:
+    print("Not a positive number")
