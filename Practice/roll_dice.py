@@ -10,3 +10,4 @@ while True:
         print("You got:", random.randint(1, 6))
     else:
         print("Enter a valid input")
+print("GAME OVER!!!")
