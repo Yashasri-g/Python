@@ -9,4 +9,4 @@ class Solution(object):
             if n == 0 :
                 nums.remove(0)
                 nums.append(0)
-        return num
+        return nums
