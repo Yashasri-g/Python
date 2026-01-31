@@ -1,4 +1,5 @@
 # 121
+# Two pointer approach
 class Solution(object):
     def maxProfit(self, prices):
         """
@@ -12,6 +13,6 @@ class Solution(object):
                 profit = prices[r] - prices[l]
                 max_profit = max(max_profit, profit)
             else:
-                l = r   # found better buying day
+                l = r   # found better buying day ; minimum
             r += 1
         return max_profit
