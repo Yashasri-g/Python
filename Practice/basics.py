@@ -32,7 +32,7 @@ Yashasri 18 9
 "3.14" → float
 '''
 print(int("25"))
-print(str(7))
+print(str(9))
 print(float("3.14"))
 OUTPUT : 
 25
