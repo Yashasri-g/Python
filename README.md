@@ -50,6 +50,7 @@ Python/
 │   ├── array_logic_building.py
 │   ├── banking.py
 │   ├── basics.py
+│   ├── compound_interest.py
 │   ├── control_statements.py
 │   ├── count_digits.py
 │   ├── factorial.py
@@ -118,6 +119,7 @@ Python 3.x is required.
 | task_1.py | Assignment 3 | Computes the factorial of a number using recursion | Functions, recursion, base case |
 | task_2.py | Assignment 3 | Computes square root, logarithm, and sine of a number | `import math`, `math.sqrt`, `math.log`, `math.sin` |
 | basics.py | Practice | Covers data types, type conversion, string methods, operators, and f-strings through multiple mini-exercises | `type()`, `int()`, `float()`, `str()`, f-strings, string slicing, `.count()`, `.replace()`, `.upper()`, `len()` |
+| compound_interest.py | Practice | Calculates compound interest and total amount given principal, rate, and time; validates user input | Functions, `pow()`, `try/except`, `ValueError`, f-strings with `:.2f` format spec |
 | control_statements.py | Practice | Demonstrates conditional logic: positive/negative check, even/odd, voting eligibility, grade calculator, simple calculator, nested conditions | `if/elif/else`, nested `if`, logical operators |
 | loops.py | Practice | Covers for/while loops with exercises: sum to N, vowel count, even numbers, multiplication table, max/min in list, digit sum, prime check, password loop | `for`, `while`, `break`, `continue`, `range()`, infinite loop |
 | lists.py | Practice | Exercises on list operations: slicing, append/insert/extend/remove/pop, sort/reverse, sum/max/min, filtering, second largest, manual reverse | List indexing, slicing `[::2]`, `[::-1]`, `.append()`, `.sort()`, `.reverse()`, `sum()`, `max()`, `min()` |

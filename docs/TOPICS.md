@@ -49,6 +49,7 @@ All Python concepts detected across every `.py` file in this repository.
 | `" ".join()` | `Leetcode/reverse_words_in_a_string.py` |
 | `ord()` for ASCII values | `Leetcode/score-of-a-string.py` |
 | `sorted()` on strings | `Leetcode/valid-anagram.py` |
+| f-string number format spec `:.2f` | `Practice/compound_interest.py` |
 
 ---
 
@@ -89,6 +90,7 @@ All Python concepts detected across every `.py` file in this repository.
 | Recursion | `Assignment 3/task_1.py`, `Practice/factorial.py` |
 | Base case in recursion | `Assignment 3/task_1.py`, `Practice/factorial.py` |
 | `global` variables | `Practice/banking.py` |
+| `pow()` built-in | `Practice/compound_interest.py` |
 | Type hints / annotations | `Leetcode/Convert_the_Temperature.py`, `Leetcode/FizzBuzz.py`, `Leetcode/contains-duplicate.py`, `Leetcode/valid-anagram.py` |
 
 ---
@@ -204,6 +206,15 @@ All Python concepts detected across every `.py` file in this repository.
 | Second largest element | `Practice/lists.py`, `Practice/1d_Array.py` |
 | In-place array mutation | `Leetcode/move_zeroes.py` |
 | `abs()` for absolute difference | `Leetcode/score-of-a-string.py` |
+
+---
+
+## Exception Handling
+
+| Concept | Where Used |
+|---|---|
+| `try / except` block | `Practice/compound_interest.py` |
+| Catching `ValueError` | `Practice/compound_interest.py` |
 
 ---
 
