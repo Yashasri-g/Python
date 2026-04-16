@@ -1,8 +1,8 @@
-name: Auto-Generate Docs
+name: Auto-Generate Docs on PR
 
 on:
-  push:
-    branches: [main]
+  pull_request:
+    types: [opened, synchronize]
     paths:
       - '**/*.py'
 
@@ -11,47 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code
-
-      - name: Generate Docs
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        run: |
-          claude -p "
-          This is a Python learning repository. Do the following:
-          1. Scan ALL .py files in all folders (Practice/, Leetcode/,
-             'ASSIGNMENT 2'/, 'Assignment 3'/, and root files task_1.py task_2.py)
-          2. Update README.md with:
-             - A folder structure tree
-             - A table listing every .py file, its folder,
-               what it does, and Python concepts it demonstrates
-          3. Update docs/TOPICS.md with all Python concepts found
-          4. Update docs/LEETCODE.md with all Leetcode solutions in a table
-          " --allowedTools "Read,Write,Edit,Bash" --output-format json
-
-      - name: Commit and push docs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md docs/
-          git diff --staged --quiet || git commit -m "docs: auto-update docs [skip ci]"
-          git push
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            This is a Python learning repository. Do the following:
+            1. Scan ALL .py files in Practice/, Leetcode/,
+               ASSIGNMENT 2/, Assignment 3/, and root files
+            2. Update README.md with a folder structure tree
+               and a table of every .py file with what it does
+               and Python concepts it demonstrates
+            3. Update docs/TOPICS.md with all Python concepts found
+            4. Update docs/LEETCODE.md with all Leetcode solutions
+            5. Commit changes with: docs: auto-update docs [skip ci]
