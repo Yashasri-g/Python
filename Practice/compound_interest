@@ -22,4 +22,4 @@ try:
     print(f"Compound Interest earned: {interest:.2f}")
 
 except ValueError:
-    print("Please enter valid numerical values.")
+    print("Please enter valid numerical values for principal, rate, and time.")
