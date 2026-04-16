@@ -36,7 +36,7 @@ print(str(9))
 print(float("3.14"))
 OUTPUT : 
 25
-7
+9
 3.14
 
 #Take two numbers as input from the user and print their sum.
@@ -66,7 +66,10 @@ print(a)
 OUTPUT : 16
 
 print(10 > 5 and 5 < 3) # False
-print(not (10 == 10)) # False
+print(not (10 == 10)) # Falsegit push -u origin <branch-name>
+```
+
+
 
 result = 10 + 2 * 5 - 3
 print(result) # 17
@@ -74,9 +77,9 @@ print(result) # 17
 print((5 + 3) * 2 ** 2) # 32
 
 text = "PythonProgramming"
-print(text[6:17])
+print(text[6:10]) # Prog
 OUTPUT : 
-Programming
+Prog
 
 # Reverse the string "developer" using slicing.
 str = "developer"
