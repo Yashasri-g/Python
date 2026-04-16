@@ -1,38 +1,33 @@
-name: Auto-update Docs
+name: Auto-Generate Docs
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - '**/*.py'
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
-  update-docs:
+  generate-docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Run Claude to update docs
-        uses: anthropics/claude-code-action@v1
+      - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             This is a Python learning repository. Do the following:
             1. Scan ALL .py files in all folders (Practice/, Leetcode/,
-               "ASSIGNMENT 2"/, "Assignment 3"/, root files)
+               ASSIGNMENT 2/, Assignment 3/, and root files)
             2. Update README.md with:
                - A folder structure tree
-               - A table listing every .py file, its folder, what it does,
-                 and Python concepts it demonstrates
-            3. Update or create docs/TOPICS.md with all Python topics covered
-            4. Update or create docs/LEETCODE.md with a table of all
-               Leetcode solutions found
+               - A table listing every .py file, its folder,
+                 what it does, and Python concepts it demonstrates
+            3. Update docs/TOPICS.md with all Python concepts found
+            4. Update docs/LEETCODE.md with all Leetcode solutions table
             5. Commit all changes with: docs: auto-update docs [skip ci]
