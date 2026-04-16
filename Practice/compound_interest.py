@@ -1,0 +1,25 @@
+# Function to calculate compound interest
+def calculate_compound_interest(p, r, t):
+    # A = P * (1 + R/100)^T
+    amount = p * (pow((1 + r / 100), t))
+    
+    # Compound Interest (CI) = Amount - Principal
+    ci = amount - p
+    return amount, ci
+
+# Taking user input
+try:
+    principal = float(input("Enter the principal amount: "))
+    rate = float(input("Enter the annual interest rate (in %): "))
+    time = float(input("Enter the time period (in years): "))
+
+    # Calculate values
+    total_amount, interest = calculate_compound_interest(principal, rate, time)
+
+    # Display results
+    print(f"\nResults:")
+    print(f"Total Amount after {time} years: {total_amount:.2f}")
+    print(f"Compound Interest earned: {interest:.2f}")
+
+except ValueError:
+    print("Please enter valid numerical values for principal, rate, and time.")
