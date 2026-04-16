@@ -1,6 +1,5 @@
 # Function to calculate compound interest
 def calculate_compound_interest(p, r, t):
-    # Formula for Total Amount (A)
     # A = P * (1 + R/100)^T
     amount = p * (pow((1 + r / 100), t))
     
