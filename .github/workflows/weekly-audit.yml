@@ -1,9 +1,9 @@
 name: Weekly Python Repo Audit
 
 on:
-  schedule:
-    - cron: '0 8 * * 0'
-  workflow_dispatch:
+  #schedule:
+   # - cron: '0 8 * * 0'
+  #workflow_dispatch:
 
 permissions:
   contents: write
@@ -36,3 +36,6 @@ jobs:
                Leetcode solutions found
             5. Open a pull request titled "docs: weekly Python repo audit"
                with all changes instead of committing directly to main
+
+
+               
